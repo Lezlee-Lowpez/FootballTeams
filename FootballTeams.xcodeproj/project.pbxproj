@@ -19,6 +19,7 @@
 		6F453DDB2C6EB8850050FD6F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6F453DDD2C6EB8890050FD6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6F453DE02C6EB8890050FD6F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6F453DE72C6EB8D60050FD6F /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +55,7 @@
 				6F453DD92C6EB8850050FD6F /* FootballTeamsApp.swift */,
 				6F453DDB2C6EB8850050FD6F /* ContentView.swift */,
 				6F453DDD2C6EB8890050FD6F /* Assets.xcassets */,
+				6F453DE72C6EB8D60050FD6F /* Config.xcconfig */,
 				6F453DDF2C6EB8890050FD6F /* Preview Content */,
 			);
 			path = FootballTeams;
