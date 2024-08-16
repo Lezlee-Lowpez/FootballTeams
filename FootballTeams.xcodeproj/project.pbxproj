@@ -11,6 +11,8 @@
 		6F453DDC2C6EB8850050FD6F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F453DDB2C6EB8850050FD6F /* ContentView.swift */; };
 		6F453DDE2C6EB8890050FD6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F453DDD2C6EB8890050FD6F /* Assets.xcassets */; };
 		6F453DE12C6EB8890050FD6F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F453DE02C6EB8890050FD6F /* Preview Assets.xcassets */; };
+		6F453DE92C6EC4A70050FD6F /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F453DE82C6EC4A70050FD6F /* DataService.swift */; };
+		6F453DEB2C6EC4D10050FD6F /* FootballResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F453DEA2C6EC4D10050FD6F /* FootballResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,9 @@
 		6F453DDD2C6EB8890050FD6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6F453DE02C6EB8890050FD6F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6F453DE72C6EB8D60050FD6F /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		6F453DE82C6EC4A70050FD6F /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		6F453DEA2C6EC4D10050FD6F /* FootballResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootballResponse.swift; sourceTree = "<group>"; };
+		6F453DEC2C6EC5C90050FD6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +57,11 @@
 		6F453DD82C6EB8850050FD6F /* FootballTeams */ = {
 			isa = PBXGroup;
 			children = (
+				6F453DEC2C6EC5C90050FD6F /* Info.plist */,
 				6F453DD92C6EB8850050FD6F /* FootballTeamsApp.swift */,
 				6F453DDB2C6EB8850050FD6F /* ContentView.swift */,
+				6F453DE82C6EC4A70050FD6F /* DataService.swift */,
+				6F453DEA2C6EC4D10050FD6F /* FootballResponse.swift */,
 				6F453DDD2C6EB8890050FD6F /* Assets.xcassets */,
 				6F453DE72C6EB8D60050FD6F /* Config.xcconfig */,
 				6F453DDF2C6EB8890050FD6F /* Preview Content */,
@@ -139,8 +147,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F453DE92C6EC4A70050FD6F /* DataService.swift in Sources */,
 				6F453DDC2C6EB8850050FD6F /* ContentView.swift in Sources */,
 				6F453DDA2C6EB8850050FD6F /* FootballTeamsApp.swift in Sources */,
+				6F453DEB2C6EC4D10050FD6F /* FootballResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,6 +159,7 @@
 /* Begin XCBuildConfiguration section */
 		6F453DE22C6EB8890050FD6F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F453DE72C6EB8D60050FD6F /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -212,6 +223,7 @@
 		};
 		6F453DE32C6EB8890050FD6F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F453DE72C6EB8D60050FD6F /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -277,6 +289,7 @@
 				DEVELOPMENT_TEAM = 352XRT73WP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FootballTeams/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -306,6 +319,7 @@
 				DEVELOPMENT_TEAM = 352XRT73WP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FootballTeams/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
