@@ -8,12 +8,13 @@
 import Foundation
 
 struct FootballResponse: Codable {
-    var count: Int?
-    var teams: [Team]?
+
+    var teams: [Team]
 }
 
-struct Team: Codable {
-    var id: Int?
-    var name: String?
+struct Team: Codable, Identifiable {
+  
+    var id: Int
+    var name: String
 }
 

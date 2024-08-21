@@ -13,24 +13,28 @@ struct DataService {
     //API KEY
     var apiKey = Bundle.main.infoDictionary?["API_KEY"] as? String
     
-    func getData() async {
+    func getData() async -> [Team] {
         //
         
         if apiKey != nil {
             
             //URL
             
-            if let url = URL(string: "http://api.football-data.org/v4/teams"){
+            if let url = URL(string: "https://api.football-data.org/v4/teams"){
                 
                 //URL Request
                 var request = URLRequest(url: url)
                 request.addValue(apiKey!, forHTTPHeaderField: "X-Auth-Token")
+//                print(request)
+
+                
                 
                 
                 //URLSession
                 
                 do {
-                    var (data, response) = try await URLSession.shared.data(for: request)
+                    let (data, response) = try await URLSession.shared.data(for: request)
+//                    print("DAta: \(data)")
                     
                     if let httpResponse = response as? HTTPURLResponse{
                         print(httpResponse.statusCode)
@@ -38,9 +42,10 @@ struct DataService {
                         if httpResponse.statusCode == 200 {
                             
                             // parse the data
-                            var decoder = JSONDecoder()
-                            var results = try decoder.decode(FootballResponse.self, from: data)
-                            print(results.teams ?? "no teams")
+                            let decoder = JSONDecoder()
+                            let results = try decoder.decode(FootballResponse.self, from: data)
+//                            print("Here are the results")
+                            return (results.teams)
                         } else {
                             print("Status code: \(httpResponse.statusCode)")
                         }
@@ -51,7 +56,7 @@ struct DataService {
                     
                     
                 } catch {
-                    print("Could not return results from request.")
+                    print("Error occurred: \(error.localizedDescription)")
                 }
                 
             }
@@ -59,6 +64,6 @@ struct DataService {
             print("This api key isn't working.")
         }
         
-        
+        return []
     }
 }
